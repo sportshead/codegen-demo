@@ -40,10 +40,10 @@ func (in *Song) DeepCopyObject() runtime.Object {
 func (in *SongList) DeepCopyInto(out *SongList) {
 	*out = *in
 	out.TypeMeta = in.TypeMeta
-	in.ObjectMeta.DeepCopyInto(&out.ObjectMeta)
+	in.ListMeta.DeepCopyInto(&out.ListMeta)
 	if in.Items != nil {
 		in, out := &in.Items, &out.Items
-		*out = make([]SongSpec, len(*in))
+		*out = make([]Song, len(*in))
 		for i := range *in {
 			(*in)[i].DeepCopyInto(&(*out)[i])
 		}

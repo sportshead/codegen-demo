@@ -24,9 +24,9 @@ type SongList struct {
 	metav1.TypeMeta `json:",inline"`
 	// Standard object's metadata.
 	// More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
-	metav1.ObjectMeta `json:"metadata"`
+	metav1.ListMeta `json:"metadata"`
 
-	Items []SongSpec `json:"items"`
+	Items []Song `json:"items"`
 }
 
 // SongSpec is the spec of a Song resource.
