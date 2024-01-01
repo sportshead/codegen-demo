@@ -1,0 +1,30 @@
+apiVersion: music.sportshead.dev/v1
+kind: Song
+metadata:
+  name: bohemian-rhapsody
+spec:
+  title: "Bohemian Rhapsody"
+  artist: "Queen"
+  rating: 5
+  genres:
+    - "Rock"
+    - "Classic"
+---
+apiVersion: music.sportshead.dev/v1
+kind: Song
+metadata:
+  name: rick-roll
+spec:
+  title: "Never Gonna Give You Up"
+  artist: "Rick Astley"
+  rating: 4
+  genres:
+    - "Pop"
+---
+apiVersion: music.sportshead.dev/v1
+kind: Song
+metadata:
+  name: baby-shark
+spec:
+  title: "Baby Shark"
+  artist: "Pinkfong"
